@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Glass Dashboard</title>
+
+    <!-- BoxIcons v2.1.2 -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Orbitron Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&clock=swap" rel="stylesheet">
+
+    <!-- Roboto Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="{% static './styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static './styles/gclock.css' %}" />
+    <link rel="stylesheet" href="{% static './styles/nclock.css' %}" />
+    <link rel="stylesheet" href="{% static './styles/eclock.css' %}" />
+    <link rel="stylesheet" href="{% static './styles/weather.css' %}" />
+  </head>
+
+  <body>
+    <div class="containers">
+        {% include 'sidebar.html' %}
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <!-- JS File -->
+    <script type="text/javascript" src="{% static './js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static './js/gclock.js' %}"></script>
+    <script type="text/javascript" src="{% static './js/eclock.js' %}"></script>
+    <script type="text/javascript" src="{% static './js/weather.js' %}"></script>
+  </body>
+</html>

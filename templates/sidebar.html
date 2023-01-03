@@ -1,0 +1,56 @@
+{% load static %}
+{% block content %}
+
+<div class="sidebar">
+    <div class="toggle">
+      <i class="bx bx-chevron-right"></i>
+    </div>
+
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="..." />
+      <h3>Anvar Jumabaev</h3>
+    </div>
+
+    <nav>
+      <div class="nav-title">Management</div>
+
+      <ul>
+        <li class="nav-item active">
+          <i class="bx bxs-dashboard"></i>
+          <a href="{% url 'home' %}"><span>Dashboard</span></a>
+        </li>
+        <li class="nav-item">
+          <i class="bx bxs-bar-chart-alt-2"></i>
+          <a href="{% url 'analytics' %}"><span>Analytics</span></a>
+        </li>
+        <li class="nav-item">
+          <i class="bx bxs-wallet"></i>
+          <a href="{% url 'about' %}"><span>Wallet</span></a>
+        </li>
+        <li class="nav-item">
+          <i class="bx bxs-bell"></i>
+          <a href="{% url 'weather' %}"><span>Notifications</span></a>
+        </li>
+        <li class="nav-item">
+          <i class="bx bxs-cog"></i>
+          <span>Settings</span>
+        </li>
+      </ul>
+
+      <hr />
+
+      <div class="nav-title">Supports</div>
+
+      <ul>
+        <li class="nav-item">
+          <i class="bx bxs-help-circle"></i>
+          <span>Get Help</span>
+        </li>
+        <li class="nav-item">
+          <i class="bx bxs-message-dots"></i>
+          <span>Send Feedback</span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  {% endblock content %}
